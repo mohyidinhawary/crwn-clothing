@@ -1,5 +1,5 @@
 import CART_ACTION_TYPES from "./cart.types";
-import { createAction } from "../../utilist/firebase/reducer/reducer.utils";
+import { createAction } from "../../utilist/reducer/reducer.utils";
 const addCartItem = (cartItems, productToAdd) => {
   const existingCartItem = cartItems.find(
     (cartItem) => cartItem.id === productToAdd.id
