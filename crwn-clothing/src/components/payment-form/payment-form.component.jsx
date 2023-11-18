@@ -24,7 +24,7 @@ const PaymentForm = () => {
     }
     setIsProcessingPayment(true);
     const response = await fetch(
-      "../../../netlify/functions/create-payment-intent.js",
+      "../../netlify/functions/create-payment-intent.js",
       {
         method: "post",
         headers: {
@@ -42,7 +42,7 @@ const PaymentForm = () => {
       payment_method: {
         card: elements.getElement(CardElement),
         billing_details: {
-          name: currentUser ? currentUser.displayName : "Yihua Zhang",
+          name: currentUser ? currentUser.displayName : "mohyidin hawary",
         },
       },
     });
@@ -65,7 +65,7 @@ const PaymentForm = () => {
         <CardElement />
         <PaymentButton
           buttonType={BUTTON_TYPE_CLASSES.inverted}
-          isLoading={isProcessingPayment}
+          isloading={isProcessingPayment.toString()}
         >
           Pay Now
         </PaymentButton>
